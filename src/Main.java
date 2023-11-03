@@ -42,11 +42,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.println("Introdu o haina");
         String s = in.nextLine();
-        boolean f=true;
+        boolean f=false;
         for (Map.Entry<String, String> m : translate.entrySet()) {
             if (m.getValue().equals(s)) {
+                f=true;
                 System.out.println(m.getKey() + ":" + m.getValue());
-            } else System.out.println("Nu este in dictionar");
-        }
+            }
+        }if (f=false)  System.out.println("Nu este in dictionar");
     }
 }
